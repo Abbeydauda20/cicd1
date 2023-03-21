@@ -10,7 +10,6 @@ terraform {
 }
 
 
-
 provider "aws" {
   region = "us-east-1"
   #profile = "default"
@@ -19,12 +18,12 @@ provider "aws" {
 terraform {
   backend "s3" {
     # Replace this with your bucket name!
-    bucket         = "jjtech-statefile-2023"
-    key            = "jjtech/terraform.tfstate"
+    bucket         = "terraformstatefilebkt"
+    key            = "dorfsky/terraform.tfstate"
     region         = "us-east-1"
 
     # Replace this with your DynamoDB table name!
-    dynamodb_table = "terraform-backend-locks"
+    dynamodb_table = "dorfsky-dynamodb"
   }
  }
 

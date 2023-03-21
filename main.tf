@@ -2,7 +2,7 @@
 #Creating ec2 instance
 
 resource "aws_instance" "ec2_example" {
-    ami = "ami-0dfcb1ef8550277af" 
+    ami = "ami-02f3f602d23f1659d" 
     instance_type = "t3.nano"
     tags = {
       Name ="${terraform.workspace}-instance"
